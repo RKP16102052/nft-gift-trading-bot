@@ -8,8 +8,8 @@ sqlalchemy==2.0.25
 alembic==1.13.1
 
 # Data Validation
-pydantic==2.7.4
-pydantic-settings==2.4.0
+pydantic==2.5.3
+pydantic-settings==2.3.4
 
 # HTTP & Utilities
 requests==2.31.0
