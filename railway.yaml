@@ -1,0 +1,27 @@
+version: 0.1
+
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    start: python -m app.main
+    port: 8000
+    environment:
+      - BOT_TOKEN
+      - WEBAPP_URL
+      - DATABASE_URL=sqlite:///./nft_trading.db
+      - DEBUG=False
+      - ADMIN_ID
+
+  frontend:
+    build:
+      dockerfile: frontend/Dockerfile
+      context: .
+    start: serve -s dist -l 3000
+    port: 3000
+    environment:
+      - VITE_API_URL
+
+volumes:
+  - nft_data:/app
