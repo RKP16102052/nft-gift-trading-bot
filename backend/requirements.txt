@@ -9,7 +9,7 @@ alembic==1.13.1
 
 # Data Validation
 pydantic==2.5.3
-pydantic-settings==2.3.4
+pydantic-settings==2.1.0
 
 # HTTP & Utilities
 requests==2.31.0
